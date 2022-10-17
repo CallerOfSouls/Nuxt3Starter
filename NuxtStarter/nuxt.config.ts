@@ -2,7 +2,14 @@
 
 export default defineNuxtConfig({
   css: ["~/assets/css/style.css"],
-  module:["@pinia/nuxt",["@storyblok.nuxt",{ accessToken: '<your key here>',region:"us" }],],
+  modules:["@pinia/nuxt",["@storyblok/nuxt", {
+    
+      accessToken: "<your-access-token>",
+
+      apiOptions: {region:"us"}, // storyblok-js-client options
+     
+    
+  }],],
   build: {
     postcss: {
       postcssOptions: {
