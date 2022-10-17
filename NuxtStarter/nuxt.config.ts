@@ -1,7 +1,8 @@
 
 
 export default defineNuxtConfig({
-  css: ["~/assets/css/tailwind.css"],
+  css: ["~/assets/css/style.css"],
+  module:["@pinia/nuxt",["@storyblok.nuxt",{ accessToken: '<your key here>',region:"us" }],],
   build: {
     postcss: {
       postcssOptions: {
